@@ -13,9 +13,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Kefei Tu">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="John Doe">
+    <meta name="copyright" content="Kefei Tu">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
@@ -346,6 +346,41 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/05/SSH-Reverse-Proxy/" >
+            
+                <span>搭建稳定的反向代理</span>
+        </a>
+        <div class="abstract-content">
+            反向代理介绍内网穿透问题
+反向代理主要解决的是内网穿透问题。假设你在内网内有一台机器B，其可以访问外网，但是B由于内网防火墙的存在，不能接收到外界的访问消息。可能你由于一些原因身处在外网的环境（如机器C），但是要操作机器B。这时，我们可以搭建一个中间的代理，其可以同时被机器B和C访问。这一方案就是反向代理方案。
+搭建反向代理
+首先，在服务器A上配置ssh服务，并修改/etc/ssh/sshd_config，将如下内容添加到文件种：
+
+
+GatewayPorts yes
+
+
+在需访问机器B上运行命令
+
+
+ssh -CqTfnN -R 0.0.0.0:PORTNUM:127.0.0.1:22...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/05</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/03/11/blink-pi/" >
             
                 <span>How to use WSL to turn on LEDs of Raspberry Pi —CS140e Lab 0 Blink</span>
@@ -502,9 +537,20 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -531,6 +577,11 @@ Mo...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/05</span><a class="archive-post-title" href= "/2020/04/05/SSH-Reverse-Proxy/" >搭建稳定的反向代理</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -584,7 +635,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "John Doe"
+        author: "Kefei Tu"
     }
 </script>
     <!-- CDN failover -->
